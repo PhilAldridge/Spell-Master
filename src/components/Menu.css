@@ -1,14 +1,14 @@
 .menu {
     display: flex;
+    flex-grow: 1;
     flex-direction: column;
     justify-content: space-evenly;
     height: 100%;
-    padding-left: 2rem;
-    padding-right: 2rem;
     align-items: center;
     background-image: radial-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.8)),
                     url('./consonants-min.jpg');
     background-size: cover;
+    width: 100%;
 }
 
 .menu button {

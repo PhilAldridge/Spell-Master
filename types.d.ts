@@ -1,4 +1,4 @@
 type word = {
     word:string
-    commonMistakes: string[]
+    commonMistakes?: string[]
 }

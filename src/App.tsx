@@ -2,7 +2,7 @@ import './App.css';
 import { useState } from 'react';
 import Race from './components/Race';
 import Menu from './components/Menu';
-
+import WordWall from './components/WordWall'
 function App() {
   const [page, setPage] = useState(''); //default-menu, race,
 
@@ -10,6 +10,8 @@ function App() {
     switch (page) {
       case 'race':
         return <Race handleMenuClick={(input:string)=>setPage(input)}/>
+      case "wordwall":
+        return <WordWall handleMenuClick={(input:string)=>setPage(input)}/>
       default:
         return <Menu handleMenuClick={(input:string)=>setPage(input)} />
     }
@@ -17,9 +19,6 @@ function App() {
   
   return (
     <div className="App">
-      {page==='' && <header className="App-header">
-        <span className='App-header-span'>Spell Master</span>
-      </header>}
       <main>
         
         {children()}

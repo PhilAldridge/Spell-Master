@@ -21,8 +21,11 @@ img {
 }
 
 main {
-  flex-grow: 1;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
 }
 
 button {
@@ -32,4 +35,5 @@ button {
   background: linear-gradient(to left,lightblue, lightpink);
   font-weight: bolder;
   font-size: 2rem;
+  width:fit-content
 }

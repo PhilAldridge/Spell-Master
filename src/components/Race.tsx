@@ -4,6 +4,7 @@ import Timer from './Timer';
 import SpellWord from './SpellWord';
 import './Race.css';
 import BarChart from './BarChart'
+import HomeButton from './HomeButton'
 
 function Race({handleMenuClick}:{handleMenuClick:(input:string)=>void}) {
     const [time, setTime] = useState(60);
@@ -39,7 +40,7 @@ function Race({handleMenuClick}:{handleMenuClick:(input:string)=>void}) {
             <>
                 <div>Time's up</div>
                 <BarChart correct={correct.length} incorrect={incorrect.length} />
-                <button onClick={()=>handleMenuClick("")}>Go back</button>
+                <HomeButton handleMenuClick={handleMenuClick} />
             </>
         }
         

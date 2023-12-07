@@ -7,6 +7,16 @@ const accidentally: word = {
     commonMistakes: ["acidentally", "accidentaly", "acidentaly", "acidentuly"]
 }
 
+const address: word = {
+    word:"address",
+    commonMistakes: ['adres','adress','addres']
+}
+
+const answer: word = {
+    word:"answer",
+    commonMistakes: ['anser']
+}
+
 export const words:word[] = [
-    accident, accidentally
+    accident, accidentally, address, answer
 ]

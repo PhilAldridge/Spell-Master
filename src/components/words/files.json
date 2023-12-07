@@ -13,8 +13,18 @@
         {"type":"file","name":"1.jpg"}
       ]}
     ]},
+    {"type":"directory","name":"address","contents":[
+      {"type":"directory","name":"images","contents":[
+        {"type":"file","name":"1.jpg"}
+      ]}
+    ]},
+    {"type":"directory","name":"answer","contents":[
+      {"type":"directory","name":"images","contents":[
+        {"type":"file","name":"download.png"}
+      ]}
+    ]},
     {"type":"file","name":"files.json"},
     {"type":"file","name":"words.ts"}
   ]},
-  {"type":"report","directories":5,"files":6}
+  {"type":"report","directories":9,"files":9}
 ]

@@ -1,0 +1,9 @@
+.wordwall {
+    display: flex;
+    padding:1rem;
+}
+
+.wordwall div {
+    padding: 5px;
+    border: 2px black solid;
+}
