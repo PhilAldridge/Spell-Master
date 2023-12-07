@@ -1,0 +1,20 @@
+[{"type":"directory","name": ".","contents":[
+    {"type":"directory","name":"accident","contents":[
+      {"type":"directory","name":"helpfulImages","contents":[
+        {"type":"file","name":"Rbq6R1.jpg"}
+      ]},
+      {"type":"directory","name":"images","contents":[
+        {"type":"file","name":"1.webp"},
+        {"type":"file","name":"2.png"}
+      ]}
+    ]},
+    {"type":"directory","name":"accidentally","contents":[
+      {"type":"directory","name":"images","contents":[
+        {"type":"file","name":"1.jpg"}
+      ]}
+    ]},
+    {"type":"file","name":"files.json"},
+    {"type":"file","name":"words.ts"}
+  ]},
+  {"type":"report","directories":5,"files":6}
+]

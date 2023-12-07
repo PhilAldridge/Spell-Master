@@ -1,0 +1,41 @@
+.timer {
+    color:blue
+}
+
+.race-info {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem;
+}
+
+.spell-word-instructions {
+    display:flex;
+    flex-direction: row;
+    gap:1rem;
+    padding: 1rem;
+    justify-content: center;
+}
+
+
+.spell-word-input {
+    display:flex;
+    flex-direction: row;
+    gap:1rem;
+    padding: 1rem;
+    justify-content: center;
+}
+
+.spell-word-input input{
+    border-radius: 0.7rem;
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+    padding:0.3rem;
+    padding-left:0.5rem;
+    padding-right:0.5rem;
+}
+
+
+
+.spell-word-input button:disabled {
+    background: grey;
+}
