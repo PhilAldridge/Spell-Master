@@ -3,8 +3,8 @@ import { words } from './words/words';
 import Timer from './Timer';
 import SpellWord from './SpellWord';
 import './Race.css';
-import BarChart from './BarChart'
-import HomeButton from './HomeButton'
+import Results from './Results';
+import MultipleChoice from './MultipleChoice'
 
 function Race({handleMenuClick}:{handleMenuClick:(input:string)=>void}) {
     const [time, setTime] = useState(60);
@@ -27,6 +27,12 @@ function Race({handleMenuClick}:{handleMenuClick:(input:string)=>void}) {
         clearInterval(interval1)
     }
 
+    let child = () => {
+        if(!currentWord) return null;
+        if((correct.length + incorrect.length) % 2 ===0) return <SpellWord word={currentWord} submitAnswer={submitAnswer} key={'word'+correct+incorrect} />
+        return <MultipleChoice wrd={currentWord} submitAnswer={submitAnswer} key={'word'+correct+incorrect}/>
+    }
+
   return (
     <div className='race'>
         <div className='race-info'>
@@ -35,13 +41,9 @@ function Race({handleMenuClick}:{handleMenuClick:(input:string)=>void}) {
             <div className='incorrect-display'>Incorrect: {incorrect.length}</div>
         </div>
         {time>=0?
-            currentWord && <SpellWord word={currentWord} submitAnswer={submitAnswer} key={'word'+correct+incorrect} />
+            child()
             :
-            <>
-                <div>Time's up</div>
-                <BarChart correct={correct.length} incorrect={incorrect.length} />
-                <HomeButton handleMenuClick={handleMenuClick} />
-            </>
+            <Results correct={correct} incorrect={incorrect} handleMenuClick={handleMenuClick} />
         }
         
     </div>

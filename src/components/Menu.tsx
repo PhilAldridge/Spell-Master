@@ -6,10 +6,10 @@ function Menu({handleMenuClick}:{handleMenuClick:(input:string)=>void}) {
         <span className='App-header-span'>Spell Master</span>
     </header>
     <div className='menu'>
-      
         <button onClick={()=>handleMenuClick("race")}>Race</button>
         <button onClick={()=>handleMenuClick("crossword")} disabled>Crossword</button>
-        <button onClick={()=>handleMenuClick("wordsearch")} disabled>Word Search</button>
+        <button onClick={()=>handleMenuClick("wordsearch")}>Word Search</button>
+        <button onClick={()=>handleMenuClick("trickywords")}>Tricky words</button>
         <button onClick={()=>handleMenuClick("wordwall")}>See my word wall</button>
     </div></>
   )

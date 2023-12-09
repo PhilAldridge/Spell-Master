@@ -1,0 +1,15 @@
+.mixUps {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+}
+.mixUps button {
+    min-width: 10rem;
+}
+
+.truetrue {
+    background: linear-gradient(lightgreen,green);
+    color: black;
+}

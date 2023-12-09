@@ -2,7 +2,7 @@ import React from 'react'
 
 function HomeButton({handleMenuClick}:{handleMenuClick:(input:string)=>void}) {
   return (
-    <button onClick={()=>handleMenuClick("")}>Go back</button>
+    <button className='home-button' onClick={()=>handleMenuClick("menu")}>Go back</button>
   )
 }
 

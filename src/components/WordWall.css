@@ -1,9 +1,24 @@
 .wordwall {
     display: flex;
-    padding:1rem;
+    width:100%;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .wordwall div {
     padding: 5px;
     border: 2px black solid;
+}
+.wordWall-container{
+    margin: 2rem;
+}
+.selected-1 {
+    background-color: lightgreen;
+}
+.selected-2 {
+    background-color: lightgray;
+}
+
+.strikethrough-true{
+    text-decoration: line-through;
 }

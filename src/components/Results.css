@@ -1,0 +1,12 @@
+.mistaken-words {
+    display: flex;
+    flex-wrap: wrap;
+    gap:1rem;
+    text-size-adjust:70%;
+    align-items: center;
+}
+
+.results-div {
+    background-color: white;
+    padding: 1rem;
+}

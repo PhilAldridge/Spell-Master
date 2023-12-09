@@ -30,7 +30,9 @@ function SpellWord({word, submitAnswer}:{word:word, submitAnswer: (correct:boole
         if(!directory) return;
         const images = directory.find(folder=>folder.type ==="directory" && folder.name === 'images')?.contents?.map(file=>file.name);
         if(!images) return;
-        setImgSrc(`./words/${word.word}/images/${images[Math.floor(Math.random()*images.length)]}`);
+        const imagesFiltered = images.filter(filename => !filename.endsWith('.Identifier'))
+        
+        setImgSrc(`./words/${word.word}/images/${imagesFiltered[Math.floor(Math.random()*imagesFiltered.length)]}`);
     },[word])
 
     return (
@@ -63,7 +65,7 @@ function SpellWord({word, submitAnswer}:{word:word, submitAnswer: (correct:boole
         cookies.set(word.word+"incorrect",Number(cookies.get(word.word+"incorrect"))+1)
     }
     setCorrect(input===word.word)
-    setTimeout(()=>submitAnswer(input===word.word),1500)
+    setTimeout(()=>submitAnswer(input===word.word),1000)
     setAttempted(true)
   }
 

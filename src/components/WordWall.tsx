@@ -19,10 +19,10 @@ function WordWall({handleMenuClick}:{handleMenuClick:(input:string)=>void}) {
     <header className="App-header">
         <span className='App-header-span'>Spell Master</span>
       </header>
-    <div className="wordwall">
+    <div className="wordWall-container"><div className="wordwall">
         
         {children}
-    </div>
+    </div></div>
         <HomeButton handleMenuClick={handleMenuClick} />
     </>
   )
