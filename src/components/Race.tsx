@@ -1,16 +1,18 @@
 import { useEffect, useState } from 'react'
-import { words } from './words/words';
+//import { words } from './words/words';
+import {wordString} from './words/words2';
 import Timer from './Timer';
 import SpellWord from './SpellWord';
 import './Race.css';
 import Results from './Results';
 import MultipleChoice from './MultipleChoice'
+const words = wordString.split('\n');
 
 function Race({handleMenuClick}:{handleMenuClick:(input:string)=>void}) {
     const [time, setTime] = useState(60);
-    const [correct, setCorrect] = useState<word[]>([]);
-    const [incorrect, setIncorrect] = useState<word[]>([]);
-    const [currentWord, setCurrentWord] = useState<word>();
+    const [correct, setCorrect] = useState<string[]>([]);
+    const [incorrect, setIncorrect] = useState<string[]>([]);
+    const [currentWord, setCurrentWord] = useState<string>();
     const [interval1, setInterval1] = useState<NodeJS.Timer>();
 
     useEffect(()=>{
@@ -51,9 +53,9 @@ function Race({handleMenuClick}:{handleMenuClick:(input:string)=>void}) {
 
   function submitAnswer(correctAnswer:boolean) {
     if(correctAnswer) {
-        setCorrect([...correct,currentWord as word])
+        setCorrect([...correct,currentWord as string])
     } else {
-        setIncorrect([...incorrect,currentWord as word])
+        setIncorrect([...incorrect,currentWord as string])
     }
     let newWord = words[Math.floor(Math.random()*words.length)];
     while(newWord === currentWord) {

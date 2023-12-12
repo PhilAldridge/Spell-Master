@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import getJumbledWords from '../lib/confuse'
 import Cookies from 'universal-cookie';
 import './MultipleChoice.css'
 
-function MultipleChoice({wrd, submitAnswer}:{wrd:word, submitAnswer: (correct:boolean)=>void}) {
+function MultipleChoice({wrd, submitAnswer}:{wrd:string, submitAnswer: (correct:boolean)=>void}) {
     const [mixUps, setMixups] = useState<string[]>();
     const [indexOfCorrect,setIndex] = useState(0);
     const [attempted, setAttempted] = useState(false);
@@ -11,10 +11,10 @@ function MultipleChoice({wrd, submitAnswer}:{wrd:word, submitAnswer: (correct:bo
     const cookies = new Cookies(null, { path:'/'});
 
     if(!mixUps) {
-        const jumble = getJumbledWords(wrd.word)
+        const jumble = getJumbledWords(wrd)
         const index = Math.floor(Math.random()*(jumble.length+1))
         setIndex(index)
-        setMixups([...jumble.slice(0,index),wrd.word,...jumble.slice(index)])
+        setMixups([...jumble.slice(0,index),wrd,...jumble.slice(index)])
     }
     
     
@@ -32,20 +32,20 @@ function MultipleChoice({wrd, submitAnswer}:{wrd:word, submitAnswer: (correct:bo
         }
          {attempted &&
                     (correct? <div>Well done!</div> : 
-                    <div>Oops! The correct answer was {wrd.word}</div>)
+                    <div>Oops! The correct answer was {wrd}</div>)
         }
     </div>
   )
 
   function handleSubmit(correct:boolean) {
-    if(!cookies.get(wrd.word+"correct")) {
-        cookies.set(wrd.word+"correct",0);
-        cookies.set(wrd.word+"incorrect",10);
+    if(!cookies.get(wrd+"correct")) {
+        cookies.set(wrd+"correct",0);
+        cookies.set(wrd+"incorrect",10);
     }
     if(correct) {
-        cookies.set(wrd.word+"correct",Number(cookies.get(wrd.word+"correct"))+1)
+        cookies.set(wrd+"correct",Number(cookies.get(wrd+"correct"))+1)
     } else {
-        cookies.set(wrd.word+"incorrect",Number(cookies.get(wrd.word+"incorrect"))+1)
+        cookies.set(wrd+"incorrect",Number(cookies.get(wrd+"incorrect"))+1)
     }
     setCorrect(correct)
     setTimeout(()=>submitAnswer(correct),1000)

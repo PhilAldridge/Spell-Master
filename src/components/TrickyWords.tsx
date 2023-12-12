@@ -1,16 +1,17 @@
 import { useState } from 'react'
-import { words } from './words/words';
+import {wordString} from './words/words2';
 import SpellWord from './SpellWord';
 import './Race.css';
 import MultipleChoice from './MultipleChoice'
 import Results from './Results'
 import Cookies from 'universal-cookie';
+const words = wordString.split('\n');
 
 function TrickyWords({handleMenuClick}:
             {handleMenuClick:(input:string)=>void}) {
-    const [correct, setCorrect] = useState<word[]>([]);
-    const [incorrect, setIncorrect] = useState<word[]>([]);
-    const [currentWord, setCurrentWord] = useState<word>();
+    const [correct, setCorrect] = useState<string[]>([]);
+    const [incorrect, setIncorrect] = useState<string[]>([]);
+    const [currentWord, setCurrentWord] = useState<string>();
 
     const cookies = new Cookies();
     const scores = cookies.getAll();
@@ -42,9 +43,9 @@ function TrickyWords({handleMenuClick}:
 
   function submitAnswer(correctAnswer:boolean) {
     if(correctAnswer) {
-        setCorrect([...correct,currentWord as word])
+        setCorrect([...correct,currentWord as string])
     } else {
-        setIncorrect([...incorrect,currentWord as word])
+        setIncorrect([...incorrect,currentWord as string])
     }
     let newWord = sortedWords[Math.floor(Math.random()*10)];
     while(newWord === currentWord) {
@@ -53,9 +54,9 @@ function TrickyWords({handleMenuClick}:
     setCurrentWord(newWord)
   }
 
-  function compareWords(w1:word,w2:word):number {
-    const score1 = scores[w1.word+'correct']? (scores[w1.word+'correct']/(scores[w1.word+'correct']+scores[w1.word+'incorrect'])) : 0;
-    const score2 = scores[w2.word+'correct']? (scores[w2.word+'correct']/(scores[w2.word+'correct']+scores[w2.word+'incorrect'])) : 0;
+  function compareWords(w1:string,w2:string):number {
+    const score1 = scores[w1+'correct']? (scores[w1+'correct']/(scores[w1+'correct']+scores[w1+'incorrect'])) : 0;
+    const score2 = scores[w2+'correct']? (scores[w2+'correct']/(scores[w2+'correct']+scores[w2+'incorrect'])) : 0;
     return score1 - score2;
   }
 }

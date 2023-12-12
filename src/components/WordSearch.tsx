@@ -1,6 +1,5 @@
 import { ReactElement, useState } from 'react';
 import { words } from './words/words';
-import getJumbledWords from '../lib/confuse';
 import './WordSearch.css';
 import _ from 'lodash';
 import HomeButton from './HomeButton';
@@ -14,7 +13,6 @@ for(let i=0;i<10;i++){
 
 function WordSearch({handleMenuClick}:{handleMenuClick:(input:string)=>void}) {
   const [correctWords,setCorrectWords] = useState<string[]>();
-  const [falseWords, setFalseWords] = useState<string[]>();
   const [wordSearch,setWordSearch] = useState<string[][]>(); 
   const [mouseDownPos,setMouseDownPos] = useState<[number,number]>();
   const [mouseOverPos,setMouseOverPos] = useState<[number,number]>();
@@ -23,18 +21,15 @@ function WordSearch({handleMenuClick}:{handleMenuClick:(input:string)=>void}) {
 
   if(!correctWords) {
     const shuffled = words.map(word=>word.word).sort(() => 0.5 - Math.random());
-    setCorrectWords(shuffled.slice(0,10));
+    setCorrectWords(shuffled);
   }
 
-  if(!falseWords && correctWords) {
-    let falseWordArray: string[] = [];
-    correctWords.forEach(word=> falseWordArray.push(getJumbledWords(word)[0]))
-    setFalseWords(falseWordArray);
+  if(correctWords && !wordSearch) {
 
     const options = {
       cols:wsSize, rows:wsSize,
       disabledDirection: ['NW','SW'],
-      dictionary: [...correctWords,...falseWordArray],
+      dictionary: correctWords,
       maxWords: correctWords.length*2,
       backwardsProbability: 0.3,
       upperCase: true,
@@ -42,6 +37,7 @@ function WordSearch({handleMenuClick}:{handleMenuClick:(input:string)=>void}) {
     }
 
     const ws = new WordSearchGenerator(options);
+    setCorrectWords((ws.words as wsWord[]).map(obj=>obj.word))
     setWordSearch(ws.grid)
   }
 
@@ -93,10 +89,16 @@ function WordSearch({handleMenuClick}:{handleMenuClick:(input:string)=>void}) {
       {rows.map(row=> {
         return <div className='wordsearch-row'>{row}</div>
       })}
-      <h3>Words to find:</h3>
-      <div className='words-to-find'>
-        {correctWords&& correctWords.map(word=><div className={'strikethrough-'+(foundWords.includes(word)||foundWords.includes(reverse(word))).toString()}>{word}</div>)}
-      </div>
+      {foundWords.length===correctWords?.length?
+        <h2>Congratulations! You found all the words.</h2>
+        :
+        <>
+          <h3>Words to find:</h3>
+          <div className='words-to-find'>
+            {correctWords&& correctWords.map(word=><div className={'strikethrough-'+(foundWords.includes(word)||foundWords.includes(reverse(word))).toString()}>{word}</div>)}
+          </div>
+        </>
+      }
       <HomeButton handleMenuClick={handleMenuClick} />
     </div>
   )
