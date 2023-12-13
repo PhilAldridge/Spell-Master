@@ -10,10 +10,12 @@ const words = wordString.split('\n');
 function WordWall({handleMenuClick}:{handleMenuClick:(input:string)=>void}) {
     const cookies = new Cookies(null, { path:'/'});
     const scores = cookies.getAll();
+    console.log(scores)
     let children: ReactElement[] = [];
     let total = 0;
     words.forEach(word=> {
-        const score = scores[word+'correct']? (scores[word+'correct']/(scores[word+'correct']+scores[word+'incorrect'])) : 0;
+        let score = scores[word+'correct']? (scores[word+'correct']/(scores[word+'correct']+scores[word+'incorrect'])) : 0;
+        if(isNaN(score)) score=0.9999;
         children.push(<div style={{background:colors[Math.floor(score*colors.length)]}}>{word}</div>)
         total += score;
     })

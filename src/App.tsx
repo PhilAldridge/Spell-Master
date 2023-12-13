@@ -5,7 +5,8 @@ import Menu from './components/Menu';
 import WordWall from './components/WordWall';
 import WordSearch from './components/WordSearch';
 import TrickyWords from './components/TrickyWords';
-import CountDown from './components/CountDown'
+import CountDown from './components/CountDown';
+import MoleGame from './components/MoleGame';
 
 function App() {
   const [page, setPage] = useState('menu'); //default-menu, race, etc.
@@ -22,6 +23,8 @@ function App() {
         return <TrickyWords handleMenuClick={(input:string)=>setPage(input)}/>
       case 'countdown':
         return <CountDown handleMenuClick={()=>setPage('race')} />
+      case 'molegame':
+        return <MoleGame handleMenuClick={(input:string)=>setPage(input)}/>
       default:
         return <Menu handleMenuClick={(input:string)=>setPage(input)} />
     }

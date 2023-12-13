@@ -4,9 +4,7 @@
   text-align: center;
   font-size: 1.5rem;
   height: 100%;
-  background-image: radial-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.8)),
-                    url('./components/consonants-min.jpg');
-                    background-size: cover;
+
 }
 
 .App-header {
@@ -26,6 +24,16 @@
   flex-grow: 0;
   font-family: 'Permanent Marker',sans-serif;
   -webkit-text-stroke: 2px black  ;
+}
+@media screen and (max-width:600px) {
+  .App-header{
+    font-size: 2rem;
+  }
+
+  .App-header-span{
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
 }
 
 .App-header-span {

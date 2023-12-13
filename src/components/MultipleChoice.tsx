@@ -39,8 +39,10 @@ function MultipleChoice({wrd, submitAnswer}:{wrd:string, submitAnswer: (correct:
 
   function handleSubmit(correct:boolean) {
     if(!cookies.get(wrd+"correct")) {
-        cookies.set(wrd+"correct",0);
-        cookies.set(wrd+"incorrect",10);
+        cookies.set(wrd+"correct",0); 
+    }
+    if(!cookies.get(wrd+"incorrect")) {
+        cookies.set(wrd+"incorrect",4);
     }
     if(correct) {
         cookies.set(wrd+"correct",Number(cookies.get(wrd+"correct"))+1)
@@ -48,7 +50,7 @@ function MultipleChoice({wrd, submitAnswer}:{wrd:string, submitAnswer: (correct:
         cookies.set(wrd+"incorrect",Number(cookies.get(wrd+"incorrect"))+1)
     }
     setCorrect(correct)
-    setTimeout(()=>submitAnswer(correct),1000)
+   submitAnswer(correct)
     setAttempted(true)
   }
 }

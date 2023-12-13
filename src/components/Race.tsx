@@ -5,7 +5,8 @@ import Timer from './Timer';
 import SpellWord from './SpellWord';
 import './Race.css';
 import Results from './Results';
-import MultipleChoice from './MultipleChoice'
+import MultipleChoice from './MultipleChoice';
+import useSound from 'use-sound';
 const words = wordString.split('\n');
 
 function Race({handleMenuClick}:{handleMenuClick:(input:string)=>void}) {
@@ -14,7 +15,9 @@ function Race({handleMenuClick}:{handleMenuClick:(input:string)=>void}) {
     const [incorrect, setIncorrect] = useState<string[]>([]);
     const [currentWord, setCurrentWord] = useState<string>();
     const [interval1, setInterval1] = useState<NodeJS.Timer>();
-
+    const [playCorrect] = useSound('/sounds/correct.mp3', {volume:0.2});
+    const [playIncorrect] = useSound('/sounds/incorrect.mp3', {volume:0.4});
+    
     useEffect(()=>{
         let interval = setInterval(()=> {
                 setTime(t=>t-1);
@@ -52,16 +55,19 @@ function Race({handleMenuClick}:{handleMenuClick:(input:string)=>void}) {
   )
 
   function submitAnswer(correctAnswer:boolean) {
-    if(correctAnswer) {
-        setCorrect([...correct,currentWord as string])
-    } else {
-        setIncorrect([...incorrect,currentWord as string])
-    }
+    correctAnswer? playCorrect() : playIncorrect();
     let newWord = words[Math.floor(Math.random()*words.length)];
     while(newWord === currentWord) {
         newWord = words[Math.floor(Math.random()*words.length)];
     }
-    setCurrentWord(newWord)
+    setTimeout(()=>{
+        if(correctAnswer) {
+            setCorrect([...correct,currentWord as string])
+        } else {
+            setIncorrect([...incorrect,currentWord as string])
+        }
+        setCurrentWord(newWord)
+    },1000)
   }
 }
 

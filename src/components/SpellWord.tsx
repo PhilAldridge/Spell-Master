@@ -32,7 +32,7 @@ function SpellWord({word, submitAnswer}:{word:string, submitAnswer: (correct:boo
         if(!images) return;
         const imagesFiltered = images.filter(filename => !filename.endsWith('.Identifier'))
         
-        setImgSrc(`./words/${word}/images/${imagesFiltered[Math.floor(Math.random()*imagesFiltered.length)]}`);
+        setImgSrc(`./words/${word.toLowerCase()}/images/${imagesFiltered[Math.floor(Math.random()*imagesFiltered.length)]}`);
     },[word])
 
     return (
@@ -56,16 +56,18 @@ function SpellWord({word, submitAnswer}:{word:string, submitAnswer: (correct:boo
 
   function handleSubmit() {
     if(!cookies.get(word+"correct")) {
-        cookies.set(word+"correct",0);
-        cookies.set(word+"incorrect",10);
+        cookies.set(word+"correct",0); 
     }
-    if(input===word) {
+    if(!cookies.get(word+"incorrect")) {
+        cookies.set(word+"incorrect",4);
+    }
+    if(input.toLowerCase()===word.toLowerCase()) {
         cookies.set(word+"correct",Number(cookies.get(word+"correct"))+1)
     } else {
         cookies.set(word+"incorrect",Number(cookies.get(word+"incorrect"))+1)
     }
     setCorrect(input===word)
-    setTimeout(()=>submitAnswer(input===word),1000)
+    submitAnswer(input===word)
     setAttempted(true)
   }
 

@@ -9,7 +9,7 @@ const TextToSpeech = ({ text }:{text:string}) => {
     const voices = synth.getVoices();
     u.voice = voices[5]
     setUtterance(u);
-    if(process.env.NODE_ENV !== 'development'){
+    if(true /*process.env.NODE_ENV !== 'development'*/){
         synth.speak(u);
     }
     

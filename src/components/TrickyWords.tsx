@@ -5,6 +5,7 @@ import './Race.css';
 import MultipleChoice from './MultipleChoice'
 import Results from './Results'
 import Cookies from 'universal-cookie';
+import useSound from 'use-sound';
 const words = wordString.split('\n');
 
 function TrickyWords({handleMenuClick}:
@@ -13,6 +14,8 @@ function TrickyWords({handleMenuClick}:
     const [incorrect, setIncorrect] = useState<string[]>([]);
     const [currentWord, setCurrentWord] = useState<string>();
 
+    const [playCorrect] = useSound('/sounds/correct.mp3', {volume:0.2});
+    const [playIncorrect] = useSound('/sounds/incorrect.mp3', {volume:0.4});
     const cookies = new Cookies();
     const scores = cookies.getAll();
     const sortedWords = words.sort((a,b)=>compareWords(a,b))
@@ -42,16 +45,20 @@ function TrickyWords({handleMenuClick}:
   )
 
   function submitAnswer(correctAnswer:boolean) {
-    if(correctAnswer) {
-        setCorrect([...correct,currentWord as string])
-    } else {
-        setIncorrect([...incorrect,currentWord as string])
-    }
+    correctAnswer? playCorrect() :playIncorrect();
     let newWord = sortedWords[Math.floor(Math.random()*10)];
     while(newWord === currentWord) {
         newWord = sortedWords[Math.floor(Math.random()*10)];
     }
-    setCurrentWord(newWord)
+    setTimeout(()=>{
+      if(correctAnswer) {
+          setCorrect([...correct,currentWord as string])
+      } else {
+          setIncorrect([...incorrect,currentWord as string])
+      }
+      setCurrentWord(newWord)
+    },1000)
+    
   }
 
   function compareWords(w1:string,w2:string):number {

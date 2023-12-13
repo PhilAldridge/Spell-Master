@@ -13,10 +13,10 @@ export default function Profile({rating}:{rating:number}) {
             <div className='progress-bar' style={{width:percent}}></div>
         </div>
       </div>
-      <div className="animal">
+      {animal && <div className="animal">
         <img src={'./animals/'+animal.src} alt={animal.name} />
         <div>{animal.name}</div>
-      </div>
+      </div>}
     </div>
   )
 }
