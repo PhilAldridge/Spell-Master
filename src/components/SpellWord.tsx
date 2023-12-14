@@ -3,6 +3,7 @@ import TextToSpeech from './TTS';
 import * as files from './words/files.json';
 import Cookies from 'universal-cookie';
 import KeyboardComponent from "./Keyboard";
+import { Capacitor } from "@capacitor/core";
 
 type directory = {
     default: [
@@ -23,7 +24,7 @@ function SpellWord({word, submitAnswer}:{word:string, submitAnswer: (correct:boo
     const [attempted, setAttempted] = useState(false);
     const [correct, setCorrect] = useState<boolean>();
     const [imgSrc,setImgSrc]= useState("");
-
+    const isMobile = Capacitor.isNativePlatform();
     const cookies = new Cookies(null, { path:'/'});
 
     useEffect(()=>{
@@ -41,18 +42,30 @@ function SpellWord({word, submitAnswer}:{word:string, submitAnswer: (correct:boo
             <div>{imgSrc !== '' && <img alt="hint" src={imgSrc}/>}</div>
             
             <div className="spell-word-input">
-                <input type="text" value={input} onChange={e=>setInput(e.target.value)} disabled onKeyUp={handleKeyDown} placeholder="spell the word"/>
+                <input 
+                    type="text"
+                    value={input} 
+                    onChange={e=>setInput(e.target.value)} 
+                    autoFocus={!isMobile} 
+                    disabled={isMobile} 
+                    onKeyUp={handleKeyDown} 
+                    placeholder="spell the word"
+                />
                 <TextToSpeech text={word}/>
             </div>
             {correct!==undefined &&
                     (correct? <div>Well done!</div> : 
                     <div>Oops! The correct answer was {word}</div>)
                 }
-            <KeyboardComponent input={input} onChange={e=>setInput(e)} onSubmit={handleSubmit}/>
+            {isMobile && <KeyboardComponent 
+                input={input} 
+                onChange={e=>setInput(e)} 
+                onSubmit={handleSubmit}/>}
         </div>
     )
 
   function handleSubmit() {
+    if(attempted) return;
     const correct = input.toLowerCase()===word.toLowerCase();
     if(!cookies.get(word+"correct")) {
         cookies.set(word+"correct",0); 
