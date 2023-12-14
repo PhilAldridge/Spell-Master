@@ -14,15 +14,13 @@
       ]}
     ]},
     {"type":"directory","name":"actual","contents":[
-      {"type":"file","name":"1.webp:Zone.Identifier"},
       {"type":"directory","name":"images","contents":[
         {"type":"file","name":"1.webp"}
       ]}
     ]},
     {"type":"directory","name":"actually","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"mono-test-it.png"},
-        {"type":"file","name":"mono-test-it.png:Zone.Identifier"}
+        {"type":"file","name":"mono-test-it.png"}
       ]}
     ]},
     {"type":"directory","name":"address","contents":[
@@ -32,8 +30,7 @@
     ]},
     {"type":"directory","name":"although","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"26557685398_ee08feb8df_n-3016735838.jpg"},
-        {"type":"file","name":"26557685398_ee08feb8df_n-3016735838.jpg:Zone.Identifier"}
+        {"type":"file","name":"26557685398_ee08feb8df_n-3016735838.jpg"}
       ]}
     ]},
     {"type":"directory","name":"answer","contents":[
@@ -43,627 +40,520 @@
     ]},
     {"type":"directory","name":"appear","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"1.jpg"},
-        {"type":"file","name":"1.jpg:Zone.Identifier"}
+        {"type":"file","name":"1.jpg"}
       ]}
     ]},
     {"type":"directory","name":"arrive","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"1.gif"},
-        {"type":"file","name":"1.gif:Zone.Identifier"}
+        {"type":"file","name":"1.gif"}
       ]}
     ]},
     {"type":"directory","name":"believe","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"religion-2949721990.jpg"},
-        {"type":"file","name":"religion-2949721990.jpg:Zone.Identifier"}
+        {"type":"file","name":"religion-2949721990.jpg"}
       ]}
     ]},
     {"type":"directory","name":"bicycle","contents":[
       {"type":"directory","name":"images","contents":[
         {"type":"file","name":"b1.png"},
-        {"type":"file","name":"b1.png:Zone.Identifier"},
-        {"type":"file","name":"b2.jpg"},
-        {"type":"file","name":"b2.jpg:Zone.Identifier"}
+        {"type":"file","name":"b2.jpg"}
       ]}
     ]},
     {"type":"directory","name":"breath","contents":[
       {"type":"directory","name":"images","contents":[
         {"type":"file","name":"b2.png"},
-        {"type":"file","name":"b2.png:Zone.Identifier"},
-        {"type":"file","name":"bh1.jpg"},
-        {"type":"file","name":"bh1.jpg:Zone.Identifier"}
+        {"type":"file","name":"bh1.jpg"}
       ]}
     ]},
     {"type":"directory","name":"breathe","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"b1.png"},
-        {"type":"file","name":"b1.png:Zone.Identifier"}
+        {"type":"file","name":"b1.png"}
       ]}
     ]},
     {"type":"directory","name":"build","contents":[
       {"type":"directory","name":"images","contents":[
         {"type":"file","name":"b1.png"},
-        {"type":"file","name":"b1.png:Zone.Identifier"},
-        {"type":"file","name":"b2.jpg"},
-        {"type":"file","name":"b2.jpg:Zone.Identifier"}
+        {"type":"file","name":"b2.jpg"}
       ]}
     ]},
     {"type":"directory","name":"business","contents":[
       {"type":"directory","name":"images","contents":[
         {"type":"file","name":"b1.png"},
-        {"type":"file","name":"b1.png:Zone.Identifier"},
-        {"type":"file","name":"b2.jpg"},
-        {"type":"file","name":"b2.jpg:Zone.Identifier"}
+        {"type":"file","name":"b2.jpg"}
       ]}
     ]},
     {"type":"directory","name":"busy","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"b1.jpg"},
-        {"type":"file","name":"b1.jpg:Zone.Identifier"}
+        {"type":"file","name":"b1.jpg"}
       ]}
     ]},
     {"type":"directory","name":"calendar","contents":[
       {"type":"directory","name":"images","contents":[
         {"type":"file","name":"c2.png"},
-        {"type":"file","name":"c2.png:Zone.Identifier"},
-        {"type":"file","name":"calendarjpg.jpg"},
-        {"type":"file","name":"calendarjpg.jpg:Zone.Identifier"}
+        {"type":"file","name":"calendarjpg.jpg"}
       ]}
     ]},
     {"type":"directory","name":"caught","contents":[
       {"type":"directory","name":"images","contents":[
         {"type":"file","name":"caught.jpg"},
-        {"type":"file","name":"caught.jpg:Zone.Identifier"},
-        {"type":"file","name":"fish.png"},
-        {"type":"file","name":"fish.png:Zone.Identifier"}
+        {"type":"file","name":"fish.png"}
       ]}
     ]},
     {"type":"directory","name":"centre","contents":[
       {"type":"directory","name":"images","contents":[
         {"type":"file","name":"c2.jpg"},
-        {"type":"file","name":"c2.jpg:Zone.Identifier"},
-        {"type":"file","name":"centre.png"},
-        {"type":"file","name":"centre.png:Zone.Identifier"}
+        {"type":"file","name":"centre.png"}
       ]}
     ]},
     {"type":"directory","name":"century","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"1.png"},
-        {"type":"file","name":"1.png:Zone.Identifier"}
+        {"type":"file","name":"1.png"}
       ]}
     ]},
     {"type":"directory","name":"certain","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"1.jpg"},
-        {"type":"file","name":"1.jpg:Zone.Identifier"}
+        {"type":"file","name":"1.jpg"}
       ]}
     ]},
     {"type":"directory","name":"circle","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"1.png"},
-        {"type":"file","name":"1.png:Zone.Identifier"}
+        {"type":"file","name":"1.png"}
       ]}
     ]},
     {"type":"directory","name":"complete","contents":[
       {"type":"directory","name":"images","contents":[
         {"type":"file","name":"1.png"},
-        {"type":"file","name":"1.png:Zone.Identifier"},
-        {"type":"file","name":"2.jpg"},
-        {"type":"file","name":"2.jpg:Zone.Identifier"}
+        {"type":"file","name":"2.jpg"}
       ]}
     ]},
     {"type":"directory","name":"consider","contents":[
       {"type":"directory","name":"images","contents":[
         {"type":"file","name":"2.jpg"},
-        {"type":"file","name":"2.jpg:Zone.Identifier"},
-        {"type":"file","name":"c.png"},
-        {"type":"file","name":"c.png:Zone.Identifier"}
+        {"type":"file","name":"c.png"}
       ]}
     ]},
     {"type":"directory","name":"continue","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"1.png"},
-        {"type":"file","name":"1.png:Zone.Identifier"}
+        {"type":"file","name":"1.png"}
       ]}
     ]},
     {"type":"directory","name":"decide","contents":[
       {"type":"directory","name":"images","contents":[
         {"type":"file","name":"1.png"},
-        {"type":"file","name":"1.png:Zone.Identifier"},
-        {"type":"file","name":"2.png"},
-        {"type":"file","name":"2.png:Zone.Identifier"}
+        {"type":"file","name":"2.png"}
       ]}
     ]},
     {"type":"directory","name":"describe","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"1.jpg"},
-        {"type":"file","name":"1.jpg:Zone.Identifier"}
+        {"type":"file","name":"1.jpg"}
       ]}
     ]},
     {"type":"directory","name":"different","contents":[
       {"type":"directory","name":"images","contents":[
         {"type":"file","name":"2.webp"},
-        {"type":"file","name":"2.webp:Zone.Identifier"},
-        {"type":"file","name":"Family.png"},
-        {"type":"file","name":"Family.png:Zone.Identifier"}
+        {"type":"file","name":"Family.png"}
       ]}
     ]},
     {"type":"directory","name":"difficult","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"1.png"},
-        {"type":"file","name":"1.png:Zone.Identifier"}
+        {"type":"file","name":"1.png"}
       ]}
     ]},
     {"type":"directory","name":"disappear","contents":[
       {"type":"directory","name":"images","contents":[
         {"type":"file","name":"hide-3381449516.png"},
-        {"type":"file","name":"hide-3381449516.png:Zone.Identifier"},
-        {"type":"file","name":"poof.jpg"},
-        {"type":"file","name":"poof.jpg:Zone.Identifier"}
+        {"type":"file","name":"poof.jpg"}
       ]}
     ]},
     {"type":"directory","name":"early","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"1.png"},
-        {"type":"file","name":"1.png:Zone.Identifier"}
+        {"type":"file","name":"1.png"}
       ]}
     ]},
     {"type":"directory","name":"earth","contents":[
       {"type":"directory","name":"images","contents":[
         {"type":"file","name":"1.jpg"},
-        {"type":"file","name":"1.jpg:Zone.Identifier"},
-        {"type":"file","name":"2.png"},
-        {"type":"file","name":"2.png:Zone.Identifier"}
+        {"type":"file","name":"2.png"}
       ]}
     ]},
     {"type":"directory","name":"eight","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"8.png"},
-        {"type":"file","name":"8.png:Zone.Identifier"}
+        {"type":"file","name":"8.png"}
       ]}
     ]},
     {"type":"directory","name":"eighth","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"1.svg"},
-        {"type":"file","name":"1.svg:Zone.Identifier"}
+        {"type":"file","name":"1.svg"}
       ]}
     ]},
     {"type":"directory","name":"enough","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"1.png"},
-        {"type":"file","name":"1.png:Zone.Identifier"}
+        {"type":"file","name":"1.png"}
       ]}
     ]},
     {"type":"directory","name":"exercise","contents":[
       {"type":"directory","name":"images","contents":[
         {"type":"file","name":"1.png"},
-        {"type":"file","name":"1.png:Zone.Identifier"},
-        {"type":"file","name":"2.png"},
-        {"type":"file","name":"2.png:Zone.Identifier"}
+        {"type":"file","name":"2.png"}
       ]}
     ]},
     {"type":"directory","name":"experience","contents":[
       {"type":"directory","name":"images","contents":[
         {"type":"file","name":"2.jpg"},
-        {"type":"file","name":"2.jpg:Zone.Identifier"},
-        {"type":"file","name":"th-2302565448.jpg"},
-        {"type":"file","name":"th-2302565448.jpg:Zone.Identifier"}
+        {"type":"file","name":"th-2302565448.jpg"}
       ]}
     ]},
     {"type":"directory","name":"experiment","contents":[
       {"type":"directory","name":"images","contents":[
         {"type":"file","name":"1.png"},
-        {"type":"file","name":"1.png:Zone.Identifier"},
-        {"type":"file","name":"2.png"},
-        {"type":"file","name":"2.png:Zone.Identifier"}
+        {"type":"file","name":"2.png"}
       ]}
     ]},
     {"type":"directory","name":"extreme","contents":[
       {"type":"directory","name":"images","contents":[
         {"type":"file","name":"1.jpg"},
-        {"type":"file","name":"1.jpg:Zone.Identifier"},
-        {"type":"file","name":"2.png"},
-        {"type":"file","name":"2.png:Zone.Identifier"}
+        {"type":"file","name":"2.png"}
       ]}
     ]},
     {"type":"directory","name":"famous","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"1.png"},
-        {"type":"file","name":"1.png:Zone.Identifier"}
+        {"type":"file","name":"1.png"}
       ]}
     ]},
     {"type":"directory","name":"favourite","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"heart.jpg"},
-        {"type":"file","name":"heart.jpg:Zone.Identifier"}
+        {"type":"file","name":"heart.jpg"}
       ]}
     ]},
     {"type":"directory","name":"february","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"feb.png"},
-        {"type":"file","name":"feb.png:Zone.Identifier"}
+        {"type":"file","name":"feb.png"}
       ]}
     ]},
     {"type":"file","name":"files.json"},
     {"type":"directory","name":"forward","contents":[
-      {"type":"file","name":"forw.jpg"},
-      {"type":"file","name":"forw.jpg:Zone.Identifier"},
-      {"type":"directory","name":"images","contents":[
-      ]}
+      {"type":"file","name":"forw.jpg"}
     ]},
     {"type":"directory","name":"fruit","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"1.jpg"},
-        {"type":"file","name":"1.jpg:Zone.Identifier"}
+        {"type":"file","name":"1.jpg"}
       ]}
     ]},
     {"type":"directory","name":"grammar","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"1.png"},
-        {"type":"file","name":"1.png:Zone.Identifier"}
+        {"type":"file","name":"1.png"}
       ]}
     ]},
     {"type":"directory","name":"group","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"group.jpg"},
-        {"type":"file","name":"group.jpg:Zone.Identifier"}
+        {"type":"file","name":"group.jpg"}
       ]}
     ]},
     {"type":"directory","name":"guard","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"sh.png"},
-        {"type":"file","name":"sh.png:Zone.Identifier"}
+        {"type":"file","name":"sh.png"}
       ]}
     ]},
     {"type":"directory","name":"guide","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"1.jpg"},
-        {"type":"file","name":"1.jpg:Zone.Identifier"}
+        {"type":"file","name":"1.jpg"}
       ]}
     ]},
     {"type":"directory","name":"heard","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"Listening01-621611147.jpg"},
-        {"type":"file","name":"Listening01-621611147.jpg:Zone.Identifier"}
+        {"type":"file","name":"Listening01-621611147.jpg"}
       ]}
     ]},
     {"type":"directory","name":"heart","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"th-2192730220.jpg"},
-        {"type":"file","name":"th-2192730220.jpg:Zone.Identifier"}
+        {"type":"file","name":"th-2192730220.jpg"}
       ]}
     ]},
     {"type":"directory","name":"height","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"1.jpg"},
-        {"type":"file","name":"1.jpg:Zone.Identifier"}
+        {"type":"file","name":"1.jpg"}
       ]}
     ]},
     {"type":"directory","name":"history","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"1.jpg"},
-        {"type":"file","name":"1.jpg:Zone.Identifier"}
+        {"type":"file","name":"1.jpg"}
       ]}
     ]},
     {"type":"directory","name":"imagine","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"1.jpg"},
-        {"type":"file","name":"1.jpg:Zone.Identifier"}
+        {"type":"file","name":"1.jpg"}
       ]}
     ]},
     {"type":"directory","name":"important","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"1.png"},
-        {"type":"file","name":"1.png:Zone.Identifier"}
+        {"type":"file","name":"1.png"}
       ]}
     ]},
     {"type":"directory","name":"increase","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"g.png"},
-        {"type":"file","name":"g.png:Zone.Identifier"}
+        {"type":"file","name":"g.png"}
       ]}
     ]},
     {"type":"directory","name":"interest","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"original-360064028.jpg"},
-        {"type":"file","name":"original-360064028.jpg:Zone.Identifier"}
+        {"type":"file","name":"original-360064028.jpg"}
       ]}
     ]},
     {"type":"directory","name":"island","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"1.jpg"},
-        {"type":"file","name":"1.jpg:Zone.Identifier"}
+        {"type":"file","name":"1.jpg"}
       ]}
     ]},
     {"type":"directory","name":"knowledge","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"books.jpg"},
-        {"type":"file","name":"books.jpg:Zone.Identifier"}
+        {"type":"file","name":"books.jpg"}
       ]}
     ]},
     {"type":"directory","name":"learn","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"1.jpg"},
-        {"type":"file","name":"1.jpg:Zone.Identifier"}
+        {"type":"file","name":"1.jpg"}
       ]}
     ]},
     {"type":"directory","name":"length","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"r.png"},
-        {"type":"file","name":"r.png:Zone.Identifier"}
+        {"type":"file","name":"r.png"}
       ]}
     ]},
     {"type":"directory","name":"library","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"library.jpg"},
-        {"type":"file","name":"library.jpg:Zone.Identifier"}
+        {"type":"file","name":"library.jpg"}
       ]}
     ]},
     {"type":"directory","name":"material","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"cry.jpg"},
-        {"type":"file","name":"cry.jpg:Zone.Identifier"}
+        {"type":"file","name":"cry.jpg"}
       ]}
     ]},
     {"type":"directory","name":"medicine","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"1.jpg"},
-        {"type":"file","name":"1.jpg:Zone.Identifier"}
+        {"type":"file","name":"1.jpg"}
       ]}
     ]},
     {"type":"directory","name":"mention","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"me.png"},
-        {"type":"file","name":"me.png:Zone.Identifier"}
+        {"type":"file","name":"me.png"}
       ]}
     ]},
     {"type":"directory","name":"minute","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"min.png"},
-        {"type":"file","name":"min.png:Zone.Identifier"}
+        {"type":"file","name":"min.png"}
       ]}
     ]},
     {"type":"directory","name":"natural","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"1.jpg"},
-        {"type":"file","name":"1.jpg:Zone.Identifier"}
+        {"type":"file","name":"1.jpg"}
       ]}
     ]},
     {"type":"directory","name":"naughty","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"pup.jpg"},
-        {"type":"file","name":"pup.jpg:Zone.Identifier"}
+        {"type":"file","name":"pup.jpg"}
       ]}
     ]},
     {"type":"directory","name":"notice","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"1.png"},
-        {"type":"file","name":"1.png:Zone.Identifier"}
+        {"type":"file","name":"1.png"}
       ]}
     ]},
     {"type":"directory","name":"occasion","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"anniversary01-655159601.png"},
-        {"type":"file","name":"anniversary01-655159601.png:Zone.Identifier"}
+        {"type":"file","name":"anniversary01-655159601.png"}
       ]}
     ]},
     {"type":"directory","name":"occasionally","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"1.jpg"},
-        {"type":"file","name":"1.jpg:Zone.Identifier"}
+        {"type":"file","name":"1.jpg"}
+      ]}
+    ]},
+    {"type":"directory","name":"often","contents":[
+      {"type":"directory","name":"images","contents":[
+        {"type":"file","name":"circle-311551_960_720-883346577.png"}
+      ]}
+    ]},
+    {"type":"directory","name":"opposite","contents":[
+      {"type":"directory","name":"images","contents":[
+        {"type":"file","name":"original-881400-1.jpg"}
       ]}
     ]},
     {"type":"directory","name":"particular","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"220_F_223229865_59UZUNzyrE9nXi8zxC4K2UNc43OaDxR8-2963430596.jpg"},
-        {"type":"file","name":"220_F_223229865_59UZUNzyrE9nXi8zxC4K2UNc43OaDxR8-2963430596.jpg:Zone.Identifier"}
+        {"type":"file","name":"220_F_223229865_59UZUNzyrE9nXi8zxC4K2UNc43OaDxR8-2963430596.jpg"}
       ]}
     ]},
     {"type":"directory","name":"peculiar","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"th-3416338828"},
-        {"type":"file","name":"th-3416338828:Zone.Identifier"}
+        {"type":"file","name":"th-3416338828"}
       ]}
     ]},
     {"type":"directory","name":"perhaps","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"panda-303949_960_720-410307283.png"},
-        {"type":"file","name":"panda-303949_960_720-410307283.png:Zone.Identifier"}
+        {"type":"file","name":"panda-303949_960_720-410307283.png"}
       ]}
     ]},
     {"type":"directory","name":"popular","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"Popularity-3021574917.jpg"},
-        {"type":"file","name":"Popularity-3021574917.jpg:Zone.Identifier"}
+        {"type":"file","name":"Popularity-3021574917.jpg"}
       ]}
     ]},
     {"type":"directory","name":"position","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"Sieger-colored-2733772383.png"},
-        {"type":"file","name":"Sieger-colored-2733772383.png:Zone.Identifier"}
+        {"type":"file","name":"Sieger-colored-2733772383.png"}
       ]}
     ]},
     {"type":"directory","name":"possess","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"6-70550843.jpg"},
-        {"type":"file","name":"6-70550843.jpg:Zone.Identifier"}
+        {"type":"file","name":"6-70550843.jpg"}
       ]}
     ]},
     {"type":"directory","name":"possession","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"th-1685098328"},
-        {"type":"file","name":"th-1685098328:Zone.Identifier"}
+        {"type":"file","name":"th-1685098328"}
       ]}
     ]},
     {"type":"directory","name":"possible","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"Confused_man-3041609253.jpg"},
-        {"type":"file","name":"Confused_man-3041609253.jpg:Zone.Identifier"}
+        {"type":"file","name":"Confused_man-3041609253.jpg"}
       ]}
     ]},
     {"type":"directory","name":"potatoes","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"clipart0268-1856083047.jpg"},
-        {"type":"file","name":"clipart0268-1856083047.jpg:Zone.Identifier"}
+        {"type":"file","name":"clipart0268-1856083047.jpg"}
       ]}
     ]},
     {"type":"directory","name":"pressure","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"Blood-Pressure-PNG-2802418181.png"},
-        {"type":"file","name":"Blood-Pressure-PNG-2802418181.png:Zone.Identifier"}
+        {"type":"file","name":"Blood-Pressure-PNG-2802418181.png"}
       ]}
     ]},
     {"type":"directory","name":"probably","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"300px-Dice-4034904940.png"},
-        {"type":"file","name":"300px-Dice-4034904940.png:Zone.Identifier"}
+        {"type":"file","name":"300px-Dice-4034904940.png"}
       ]}
     ]},
     {"type":"directory","name":"promise","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"1.jpg"},
-        {"type":"file","name":"1.jpg:Zone.Identifier"}
+        {"type":"file","name":"1.jpg"}
       ]}
     ]},
     {"type":"directory","name":"purpose","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"destination-1285851_960_720-3776009870.png"},
-        {"type":"file","name":"destination-1285851_960_720-3776009870.png:Zone.Identifier"}
+        {"type":"file","name":"destination-1285851_960_720-3776009870.png"}
       ]}
     ]},
     {"type":"directory","name":"quarter","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"1.png"},
-        {"type":"file","name":"1.png:Zone.Identifier"}
+        {"type":"file","name":"1.png"}
       ]}
     ]},
     {"type":"directory","name":"question","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"questions-182657679.jpg"},
-        {"type":"file","name":"questions-182657679.jpg:Zone.Identifier"}
+        {"type":"file","name":"questions-182657679.jpg"}
       ]}
     ]},
     {"type":"directory","name":"recent","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"th-3828271324"},
-        {"type":"file","name":"th-3828271324:Zone.Identifier"}
+        {"type":"file","name":"th-3828271324"}
       ]}
     ]},
     {"type":"directory","name":"regular","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"pink-hexagon.jpg"},
-        {"type":"file","name":"pink-hexagon.jpg:Zone.Identifier"}
+        {"type":"file","name":"pink-hexagon.jpg"}
       ]}
     ]},
     {"type":"directory","name":"reign","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"crown-2024306_960_720-1665040788.png"},
-        {"type":"file","name":"crown-2024306_960_720-1665040788.png:Zone.Identifier"}
+        {"type":"file","name":"crown-2024306_960_720-1665040788.png"}
       ]}
     ]},
     {"type":"directory","name":"remember","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"th-4169600468.jpg"},
-        {"type":"file","name":"th-4169600468.jpg:Zone.Identifier"}
+        {"type":"file","name":"th-4169600468.jpg"}
       ]}
     ]},
     {"type":"directory","name":"sentence","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"Artboard_1-213615658.png"},
-        {"type":"file","name":"Artboard_1-213615658.png:Zone.Identifier"}
+        {"type":"file","name":"Artboard_1-213615658.png"}
       ]}
     ]},
     {"type":"directory","name":"separate","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"mcol-pie-chart-3000750659.png"},
-        {"type":"file","name":"mcol-pie-chart-3000750659.png:Zone.Identifier"}
+        {"type":"file","name":"mcol-pie-chart-3000750659.png"}
       ]}
     ]},
     {"type":"directory","name":"special","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"th-1083920550.jpg"},
-        {"type":"file","name":"th-1083920550.jpg:Zone.Identifier"}
+        {"type":"file","name":"th-1083920550.jpg"}
       ]}
     ]},
     {"type":"directory","name":"straight","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"6843772992_f4710e5edc_n-3986701744.jpg"},
-        {"type":"file","name":"6843772992_f4710e5edc_n-3986701744.jpg:Zone.Identifier"}
+        {"type":"file","name":"6843772992_f4710e5edc_n-3986701744.jpg"}
       ]}
     ]},
     {"type":"directory","name":"strange","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"dancing+bananas-1157873941.jpg"},
-        {"type":"file","name":"dancing+bananas-1157873941.jpg:Zone.Identifier"}
+        {"type":"file","name":"dancing+bananas-1157873941.jpg"}
       ]}
     ]},
     {"type":"directory","name":"strength","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"arm-2029989__180-3497584285.png"},
-        {"type":"file","name":"arm-2029989__180-3497584285.png:Zone.Identifier"}
+        {"type":"file","name":"arm-2029989__180-3497584285.png"}
       ]}
     ]},
     {"type":"directory","name":"suppose","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"th-976707330.jpg"},
-        {"type":"file","name":"th-976707330.jpg:Zone.Identifier"}
+        {"type":"file","name":"th-976707330.jpg"}
       ]}
     ]},
     {"type":"directory","name":"surprise","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"Birthday_Boy_Gift_Balloons-4266488026.jpg"},
-        {"type":"file","name":"Birthday_Boy_Gift_Balloons-4266488026.jpg:Zone.Identifier"}
+        {"type":"file","name":"Birthday_Boy_Gift_Balloons-4266488026.jpg"}
       ]}
     ]},
     {"type":"directory","name":"therefore","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"Rodin232-3073862302.jpg"},
-        {"type":"file","name":"Rodin232-3073862302.jpg:Zone.Identifier"}
+        {"type":"file","name":"Rodin232-3073862302.jpg"}
       ]}
     ]},
     {"type":"directory","name":"though","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"220_F_172768558_31qXGXafJaQhIkjUzdPncMF0FHiVQttJ.jpg"},
-        {"type":"file","name":"220_F_172768558_31qXGXafJaQhIkjUzdPncMF0FHiVQttJ.jpg:Zone.Identifier"}
+        {"type":"file","name":"220_F_172768558_31qXGXafJaQhIkjUzdPncMF0FHiVQttJ.jpg"}
       ]}
     ]},
     {"type":"directory","name":"thought","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"Metacognition-2687616141.png"},
-        {"type":"file","name":"Metacognition-2687616141.png:Zone.Identifier"}
+        {"type":"file","name":"Metacognition-2687616141.png"}
       ]}
     ]},
     {"type":"directory","name":"through","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"MOw7V-340051871.jpg"},
-        {"type":"file","name":"MOw7V-340051871.jpg:Zone.Identifier"}
+        {"type":"file","name":"MOw7V-340051871.jpg"}
       ]}
     ]},
     {"type":"directory","name":"variety","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"36022229524_007d84c62e_n-543174690.jpg"},
-        {"type":"file","name":"36022229524_007d84c62e_n-543174690.jpg:Zone.Identifier"}
+        {"type":"file","name":"36022229524_007d84c62e_n-543174690.jpg"}
       ]}
     ]},
     {"type":"directory","name":"weight","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"th-1283688582.jpg"},
-        {"type":"file","name":"th-1283688582.jpg:Zone.Identifier"}
+        {"type":"file","name":"th-1283688582.jpg"}
       ]}
     ]},
     {"type":"directory","name":"woman","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"1.jpg"},
-        {"type":"file","name":"1.jpg:Zone.Identifier"}
+        {"type":"file","name":"1.jpg"}
       ]}
     ]},
     {"type":"directory","name":"women","contents":[
       {"type":"directory","name":"images","contents":[
-        {"type":"file","name":"1.jpg"},
-        {"type":"file","name":"1.jpg:Zone.Identifier"}
+        {"type":"file","name":"1.jpg"}
       ]}
     ]}
   ]},
-  {"type":"report","directories":211,"files":243}
+  {"type":"report","directories":214,"files":127}
 ]
