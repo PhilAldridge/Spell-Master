@@ -79,15 +79,24 @@ function WordSearch({handleMenuClick}:{handleMenuClick:(input:string)=>void}) {
       const rowElement = row.map((letter,letterIndex)=><div 
             className={'wordsearch-cell selected-'+(selected.length>0&& selected[rowIndex][letterIndex]).toString()}
             onMouseDown={(e)=>handleMouseDown(e,[rowIndex,letterIndex])}
+            onTouchStart={(e)=>handleTouchDown(e,[rowIndex,letterIndex])}
             onMouseOver={()=>handleMouseOver([rowIndex,letterIndex])}
+            data-row={rowIndex}
+            data-letter={letterIndex}
+            key={'cell-'+rowIndex+'-'+letterIndex}
           >{letter}</div>)
       rows.push(rowElement)
     })
   }
   return (
-    <div className='wordsearch' onMouseUp={handleMouseUp}>
-      {rows.map(row=> {
-        return <div className='wordsearch-row'>{row}</div>
+    <div 
+      className='wordsearch' 
+      onMouseUp={handleMouseUp} 
+      onTouchMove={(e)=>handleTouchMove(e)}
+      onTouchEnd={handleMouseUp}
+    >
+      {rows.map((row,i)=> {
+        return <div className='wordsearch-row' key={'row'+i}>{row}</div>
       })}
       {foundWords.length===correctWords?.length?
         <h2>Congratulations! You found all the words.</h2>
@@ -108,7 +117,22 @@ function WordSearch({handleMenuClick}:{handleMenuClick:(input:string)=>void}) {
     setMouseOverPos(coords);
   }
 
-  function handleMouseDown(e: React.MouseEvent<HTMLDivElement, MouseEvent>,coords:[number,number]) {
+  function handleTouchMove(e: React.TouchEvent) {
+    // get the touch element
+    const touch = e.touches[0];
+
+    // get the DOM element
+    const element = document.elementFromPoint(touch.clientX, touch.clientY);
+    if(!element?.hasAttribute('data-row')|| !element?.hasAttribute('data-letter')) return;
+    setMouseOverPos([Number(element.getAttribute('data-row')),Number(element.getAttribute('data-letter'))])
+    //console.log(element?.attributes?['data-row'])
+  }
+
+  function handleTouchDown(e: React.TouchEvent<HTMLDivElement>,coords:[number,number]) {
+    setMouseDownPos(coords)
+  }
+
+  function handleMouseDown(e: React.MouseEvent<HTMLDivElement>,coords:[number,number]) {
     e.preventDefault();
     setMouseDownPos(coords)
   }
