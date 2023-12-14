@@ -59,7 +59,7 @@ const TextToSpeech = ({ text }:{text:string}) => {
     }
   };
   return (
-      <button onClick={handlePlay}>&#x25B6;</button>
+      <button onClick={handlePlay}>&#x1F50A;</button>
   );
 };
 

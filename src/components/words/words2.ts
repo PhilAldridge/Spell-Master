@@ -38,7 +38,7 @@ experiment
 extreme
 famous
 favourite
-February
+february
 forward
 fruit
 grammar

@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import TextToSpeech from './TTS';
 import * as files from './words/files.json';
-import Cookies from 'universal-cookie'
+import Cookies from 'universal-cookie';
+import KeyboardComponent from "./Keyboard";
 
 type directory = {
     default: [
@@ -38,40 +39,38 @@ function SpellWord({word, submitAnswer}:{word:string, submitAnswer: (correct:boo
     return (
         <div>
             <div>{imgSrc !== '' && <img alt="hint" src={imgSrc}/>}</div>
-            <div className="spell-word-instructions">
-                Spell the word you can hear:
-                <TextToSpeech text={word}/>
-            </div>
+            
             <div className="spell-word-input">
-                <input type="text" value={input} onChange={e=>setInput(e.target.value)} autoFocus onKeyUp={handelKeyDown}/>
-                <button onClick={handleSubmit} disabled={attempted || input ===""}>&#x23CE;</button>
-                
+                <input type="text" value={input} onChange={e=>setInput(e.target.value)} disabled onKeyUp={handleKeyDown} placeholder="spell the word"/>
+                <TextToSpeech text={word}/>
             </div>
             {correct!==undefined &&
                     (correct? <div>Well done!</div> : 
                     <div>Oops! The correct answer was {word}</div>)
                 }
+            <KeyboardComponent input={input} onChange={e=>setInput(e)} onSubmit={handleSubmit}/>
         </div>
     )
 
   function handleSubmit() {
+    const correct = input.toLowerCase()===word.toLowerCase();
     if(!cookies.get(word+"correct")) {
         cookies.set(word+"correct",0); 
     }
     if(!cookies.get(word+"incorrect")) {
         cookies.set(word+"incorrect",4);
     }
-    if(input.toLowerCase()===word.toLowerCase()) {
+    if(correct) {
         cookies.set(word+"correct",Number(cookies.get(word+"correct"))+1)
     } else {
         cookies.set(word+"incorrect",Number(cookies.get(word+"incorrect"))+1)
     }
-    setCorrect(input===word)
-    submitAnswer(input===word)
+    setCorrect(correct)
+    submitAnswer(correct)
     setAttempted(true)
   }
 
-  function handelKeyDown(e: React.KeyboardEvent<HTMLInputElement>) {
+  function handleKeyDown(e: React.KeyboardEvent<HTMLInputElement>) {
     if(e.key==='Enter') handleSubmit();
   }
 }

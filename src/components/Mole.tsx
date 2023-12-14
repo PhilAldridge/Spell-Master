@@ -16,7 +16,7 @@ export default function Mole({handleClick}:{handleClick:(corr:boolean)=>void}) {
     return <div className="mole-object">
         {visible &&
             <><img src="/molegame/doraemon.png" className="mole" alt="mole" onClick={clickMole}/>
-            <div className="mole-game-word">{word}</div></>
+            <div className="mole-game-word" onClick={clickMole}>{word}</div></>
         }
         <img src="/molegame/soil.png" className="soil" alt="soil"/>
         
@@ -36,8 +36,11 @@ export default function Mole({handleClick}:{handleClick:(corr:boolean)=>void}) {
         }
         setTimeout(()=>{
             setVisible(true);
-            playUp();
-            if(!visible) setTimeout(()=>getWord(),4000) 
+           
+            if(!visible) {
+                playUp();
+                setTimeout(()=>getWord(),4000) 
+            }
               
         },Math.round(Math.random()*3000))
     }
