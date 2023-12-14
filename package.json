@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@blex41/word-search": "^1.2.0",
+    "@capacitor-community/text-to-speech": "^3.0.1",
     "@capacitor/android": "^5.5.1",
     "@capacitor/cli": "^5.5.1",
     "@capacitor/core": "^5.5.1",
