@@ -9,14 +9,16 @@ export default function Mole({handleClick}:{handleClick:(corr:boolean)=>void}) {
     const [correctSpelling, setCorrectSpelling] = useState(false);
     const [visible, setVisible] = useState(false);
     const [clicked, setClicked] = useState(false);
-    const [playUp] = useSound('/sounds/up.mp3', {volume:0.5});
+    const [playWoo] = useSound('/sounds/woo.mp3', {volume:0.4, playbackRate: 1.2});
 
     if(word==='') getWord();
 
     return <div className="mole-object">
         {visible &&
-            <><img src="/molegame/doraemon.png" className="mole" alt="mole" onClick={clickMole}/>
-            <div className="mole-game-word" onClick={clickMole}>{word}</div></>
+            <div className="mole-div">
+                <img src="/molegame/doraemon.png" className="mole" alt="mole" onClick={clickMole}/>
+                <div className="mole-game-word" onClick={clickMole}>{word}</div>
+            </div>
         }
         <img src="/molegame/soil.png" className="soil" alt="soil"/>
         
@@ -35,13 +37,11 @@ export default function Mole({handleClick}:{handleClick:(corr:boolean)=>void}) {
             setCorrectSpelling(false)
         }
         setTimeout(()=>{
-            setVisible(true);
-           
+            playWoo();
             if(!visible) {
-                playUp();
                 setTimeout(()=>getWord(),4000) 
             }
-              
+            setVisible(true);
         },Math.round(Math.random()*3000))
     }
 
