@@ -1,8 +1,8 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'com.PhilAldridge.ks2spelling',
-  appName: 'KS2 Spelling',
+  appId: 'com.PhilAldridge.spellmaster',
+  appName: 'Spell Master',
   webDir: 'build',
   server: {
     androidScheme: 'https'

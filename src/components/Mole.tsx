@@ -36,9 +36,9 @@ export default function Mole({handleClick}:{handleClick:(corr:boolean)=>void}) {
             setWord(getJumbledWords(word2)[0])
             setCorrectSpelling(false)
         }
-        setTimeout(()=>{
-            playWoo();
+        setTimeout(()=>{  
             if(!visible) {
+                playWoo();
                 setTimeout(()=>getWord(),4000) 
             }
             setVisible(true);
