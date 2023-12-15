@@ -32,7 +32,7 @@ function MultipleChoice({wrd, submitAnswer}:{wrd:string, submitAnswer: (correct:
         }
          {attempted &&
                     (correct? <div>Well done!</div> : 
-                    <div>Oops! The correct answer was {wrd}</div>)
+                    <div className="correction">{wrd}</div>)
         }
     </div>
   )

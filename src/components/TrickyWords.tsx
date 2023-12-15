@@ -57,7 +57,7 @@ function TrickyWords({handleMenuClick}:
           setIncorrect([...incorrect,currentWord as string])
       }
       setCurrentWord(newWord)
-    },1000)
+    },correctAnswer? 1000:2000)
     
   }
 

@@ -55,7 +55,7 @@ function SpellWord({word, submitAnswer}:{word:string, submitAnswer: (correct:boo
             </div>
             {correct!==undefined &&
                     (correct? <div>Well done!</div> : 
-                    <div>Oops! The correct answer was {word}</div>)
+                    <div className="correction">{word}</div>)
                 }
             {isMobile && <KeyboardComponent 
                 input={input} 

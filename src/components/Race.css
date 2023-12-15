@@ -44,6 +44,11 @@
     width:2rem;
 }
 
+.correction {
+    color: red;
+    font-weight: bold;
+    font-size: 2.3rem;
+}
 
 
 .spell-word-input button:disabled {

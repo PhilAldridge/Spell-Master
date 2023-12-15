@@ -67,7 +67,7 @@ function Race({handleMenuClick}:{handleMenuClick:(input:string)=>void}) {
             setIncorrect([...incorrect,currentWord as string])
         }
         setCurrentWord(newWord)
-    },1000)
+    },correctAnswer? 1000:2000)
   }
 }
 
