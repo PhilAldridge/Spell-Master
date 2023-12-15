@@ -1,5 +1,8 @@
 # Spelling Master
 
+<img width="532" alt="Capture" src="https://github.com/PhilAldridge/Spell-Master/assets/105776682/9db1e811-683c-469b-9a20-0fb621e29326">
+
+
 This project was made usng react and converted into an android app using Ionic Capacitor. It contains the following features/development practices:
 - Various levels managed on a single page using state
 - Use of cookies
