@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import getJumbledWords from '../lib/confuse'
-import Cookies from 'universal-cookie';
+import { getData, setData } from '../lib/data';
 import './MultipleChoice.css'
 
 function MultipleChoice({wrd, submitAnswer}:{wrd:string, submitAnswer: (correct:boolean)=>void}) {
@@ -8,7 +8,6 @@ function MultipleChoice({wrd, submitAnswer}:{wrd:string, submitAnswer: (correct:
     const [indexOfCorrect,setIndex] = useState(0);
     const [attempted, setAttempted] = useState(false);
     const [correct, setCorrect] = useState<boolean>(false);
-    const cookies = new Cookies(null, { path:'/'});
 
     if(!mixUps) {
         const jumble = getJumbledWords(wrd)
@@ -37,22 +36,30 @@ function MultipleChoice({wrd, submitAnswer}:{wrd:string, submitAnswer: (correct:
     </div>
   )
 
-  function handleSubmit(correct:boolean) {
-    if(!cookies.get(wrd+"correct")) {
-        cookies.set(wrd+"correct",0); 
-    }
-    if(!cookies.get(wrd+"incorrect")) {
-        cookies.set(wrd+"incorrect",4);
-    }
+  async function handleSubmit(correct:boolean) {
+
+    let correctData = await getData(wrd+"correct");
+    let incorrectData = await getData(wrd+"incorrect");
+    if(!correctData){
+        await setData(wrd+"correct",'0');
+        correctData='0';
+    } 
+    if(!incorrectData){
+        await setData(wrd+"incorrect",'4');
+        incorrectData='4';
+    } 
     if(correct) {
-        cookies.set(wrd+"correct",Number(cookies.get(wrd+"correct"))+1)
+        await setData(wrd+"correct",(Number(correctData)+1).toString());
     } else {
-        cookies.set(wrd+"incorrect",Number(cookies.get(wrd+"incorrect"))+1)
+        await setData(wrd+"incorrect",(Number(incorrectData)+1).toString());
     }
+
     setCorrect(correct)
    submitAnswer(correct)
     setAttempted(true)
   }
 }
+
+
 
 export default MultipleChoice

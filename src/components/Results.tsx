@@ -1,12 +1,19 @@
 import BarChart from "./BarChart"
 import HomeButton from "./HomeButton"
 import './Results.css';
-import Cookies from "universal-cookie";
+import { getData, setData } from "../lib/data";
+import { useEffect, useState } from "react";
 
 function Results({correct,incorrect,handleMenuClick}:{correct:string[],incorrect:string[],handleMenuClick:(str:string)=>void}) {
-  const cookies = new Cookies(null, { path:'/'});
-  const best = cookies.get('best-score') || 0;
-  if(best<correct.length) cookies.set('best-score',correct.length)
+  const [best,setBest] = useState<number>()
+  useEffect(()=>{
+    async function getBest(score:number) {
+      const best = Number(await getData('best-score')) || 0;
+      if(best<score) await setData('best-score',score.toString())
+      setBest(best)
+    }
+    getBest(correct.length);
+  },[correct])
   
   return (
     <div className="results-div">

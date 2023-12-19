@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import TextToSpeech from './TTS';
 import * as files from './words/files.json';
-import Cookies from 'universal-cookie';
+import { getData,setData } from "../lib/data";
 import KeyboardComponent from "./Keyboard";
 import { Capacitor } from "@capacitor/core";
 
@@ -25,7 +25,6 @@ function SpellWord({word, submitAnswer}:{word:string, submitAnswer: (correct:boo
     const [correct, setCorrect] = useState<boolean>();
     const [imgSrc,setImgSrc]= useState("");
     const isMobile = Capacitor.isNativePlatform();
-    const cookies = new Cookies(null, { path:'/'});
 
     useEffect(()=>{
         const directory = (files as unknown as directory).default[0].contents.find(folder => folder.type === "directory" && folder.name === word)?.contents;
@@ -64,24 +63,29 @@ function SpellWord({word, submitAnswer}:{word:string, submitAnswer: (correct:boo
         </div>
     )
 
-  function handleSubmit() {
+  async function handleSubmit() {
     if(attempted) return;
     const correct = input.toLowerCase()===word.toLowerCase();
-    if(!cookies.get(word+"correct")) {
-        cookies.set(word+"correct",0); 
-    }
-    if(!cookies.get(word+"incorrect")) {
-        cookies.set(word+"incorrect",4);
-    }
+    let correctData = await getData(word+"correct");
+    let incorrectData = await getData(word+"incorrect");
+    if(!correctData){
+        await setData(word+"correct",'0');
+        correctData='0';
+    } 
+    if(!incorrectData){
+        await setData(word+"incorrect",'4');
+        incorrectData='4';
+    } 
     if(correct) {
-        cookies.set(word+"correct",Number(cookies.get(word+"correct"))+1)
+        await setData(word+"correct",(Number(correctData)+1).toString());
     } else {
-        cookies.set(word+"incorrect",Number(cookies.get(word+"incorrect"))+1)
+        await setData(word+"incorrect",(Number(incorrectData)+1).toString());
     }
     setCorrect(correct)
     submitAnswer(correct)
     setAttempted(true)
   }
+  
 
   function handleKeyDown(e: React.KeyboardEvent<HTMLInputElement>) {
     if(e.key==='Enter') handleSubmit();

@@ -1,11 +1,11 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import {wordString} from './words/words2';
 import SpellWord from './SpellWord';
 import './Race.css';
 import MultipleChoice from './MultipleChoice'
 import Results from './Results'
-import Cookies from 'universal-cookie';
 import useSound from 'use-sound';
+import { getData, getKeys } from '../lib/data';
 const words = wordString.split('\n');
 
 function TrickyWords({handleMenuClick}:
@@ -13,14 +13,26 @@ function TrickyWords({handleMenuClick}:
     const [correct, setCorrect] = useState<string[]>([]);
     const [incorrect, setIncorrect] = useState<string[]>([]);
     const [currentWord, setCurrentWord] = useState<string>();
-
+    const [trickyWords,setTrickyWords] = useState<string[]>();
     const [playCorrect] = useSound('/sounds/correct.mp3', {volume:0.2});
     const [playIncorrect] = useSound('/sounds/incorrect.mp3', {volume:0.4});
-    const cookies = new Cookies();
-    const scores = cookies.getAll();
-    const sortedWords = words.sort((a,b)=>compareWords(a,b))
-    if(!currentWord){
-        setCurrentWord(sortedWords[Math.floor(Math.random()*10)]);
+
+    useEffect(()=>{
+      async function getTrickyWords(){
+        const keys = await getKeys();
+        let scores:Map<string,number> = new Map();
+        for(let i=0; i<keys.length;i++){
+          const value = await getData(keys[i]);
+          scores.set(keys[i], Number(value)||0);
+        }
+        const sortedWords = words.sort((a,b)=>compareWords(a,b,scores))
+        setTrickyWords(sortedWords.slice(0,10));
+      }
+
+      getTrickyWords();
+    },[])
+    if(!currentWord && trickyWords){
+        setCurrentWord(trickyWords[Math.floor(Math.random()*10)]);
     }
 
     let child = () => {
@@ -46,9 +58,9 @@ function TrickyWords({handleMenuClick}:
 
   function submitAnswer(correctAnswer:boolean) {
     correctAnswer? playCorrect() :playIncorrect();
-    let newWord = sortedWords[Math.floor(Math.random()*10)];
+    let newWord = (trickyWords||words)[Math.floor(Math.random()*10)];
     while(newWord === currentWord) {
-        newWord = sortedWords[Math.floor(Math.random()*10)];
+        newWord = (trickyWords||words)[Math.floor(Math.random()*10)];
     }
     setTimeout(()=>{
       if(correctAnswer) {
@@ -61,9 +73,9 @@ function TrickyWords({handleMenuClick}:
     
   }
 
-  function compareWords(w1:string,w2:string):number {
-    const score1 = scores[w1+'correct']? (scores[w1+'correct']/(scores[w1+'correct']+scores[w1+'incorrect'])) : 0;
-    const score2 = scores[w2+'correct']? (scores[w2+'correct']/(scores[w2+'correct']+scores[w2+'incorrect'])) : 0;
+  function compareWords(w1:string,w2:string,scores:Map<string,number>):number {
+    const score1 = (scores.get(w1+'correct')||0)/((scores.get(w1+'correct')||0)+(scores.get(w1+'incorrect')||1));
+    const score2 = (scores.get(w2+'correct')||0)/((scores.get(w2+'correct')||0)+(scores.get(w2+'incorrect')||1));
     return score1 - score2;
   }
 }

@@ -1,6 +1,6 @@
-import Cookies from "universal-cookie"
 import {wordString} from './words/words2';
-import { ReactElement } from "react";
+import { ReactElement,useEffect, useState } from "react";
+import { getData, getKeys } from "../lib/data";
 import HomeButton from "./HomeButton";
 import './WordWall.css'
 import Profile from './Profile'
@@ -8,13 +8,27 @@ const colors = ['#FF0000','#FF2000','#FF4000','#FF6000','#FF8000','#FF9F00','#FF
 const words = wordString.split('\n');
 
 function WordWall({handleMenuClick}:{handleMenuClick:(input:string)=>void}) {
-    const cookies = new Cookies(null, { path:'/'});
-    const scores = cookies.getAll();
+  const [scores,setScores] = useState<Map<string,number>>(new Map());
+  useEffect(()=>{
+    async function getScores(){
+      const keys = await getKeys();
+      let scores:Map<string,number> = new Map();
+      for(let i=0; i<keys.length;i++){
+        const value = await getData(keys[i]);
+        console.log(value)
+        scores.set(keys[i], Number(value)||0);
+      }
+      setScores(scores)
+    }
+
+    getScores();
+  },[])
+
     console.log(scores)
     let children: ReactElement[] = [];
     let total = 0;
     words.forEach(word=> {
-        let score = scores[word+'correct']? (scores[word+'correct']/(scores[word+'correct']+scores[word+'incorrect'])) : 0;
+        let score = (scores.get(word+'correct') ||0)/((scores.get(word+'correct')||0)+(scores.get(word+'incorrect')||1));
         if(isNaN(score)) score=0.9999;
         children.push(<div style={{background:colors[Math.floor(score*colors.length)]}}>{word}</div>)
         total += score;
